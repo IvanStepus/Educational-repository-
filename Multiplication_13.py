@@ -1,7 +1,6 @@
 
 '''We need to find the largest product of 13 numbers in the given sample'''
 
-
 def search(mego_num):
     max_digit = 0
 
