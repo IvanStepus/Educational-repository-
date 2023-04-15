@@ -41,3 +41,19 @@ def degree(n):
 n = 2
 result = degree(n)
 print(result(3))
+
+"""Write a function that takes a list of integers as input and returns another function. 
+The returned function should take a single argument - a number n - and return the sum of n consecutive 
+elements of the list starting from the first element."""
+
+
+def sp_digit(sp):
+    def arg(n):
+        return sum(sp[0: n])
+
+    return arg
+
+
+sp = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+result = sp_digit(sp)
+print(result(3))
