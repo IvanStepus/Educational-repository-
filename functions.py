@@ -57,3 +57,17 @@ def sp_digit(sp):
 sp = [9, 8, 7, 6, 5, 4, 3, 2, 1]
 result = sp_digit(sp)
 print(result(3))
+
+'''Write a function that takes a string and returns another function. 
+The returned function should take one argument - a 
+string s - and return the number of occurrences of the string s in the original string.'''
+
+
+def str_funk(word):
+    def find_str(s):
+        return s.count(word)
+
+    return find_str
+
+result = str_funk("word")
+print(result('word word wordword'))
