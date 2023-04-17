@@ -69,5 +69,24 @@ def str_funk(word):
 
     return find_str
 
+
 result = str_funk("word")
 print(result('word word wordword'))
+
+'''Write a function that takes one argument - a list of strings, and returns another function. 
+The returned function should take one argument - a character c, and return a list of strings from the original list 
+that start with the character c.'''
+
+
+def sp_strok(spisok):
+    def one_arg(arg):
+        return [i for i in spisok if i.startswith(arg)]
+
+    return one_arg
+
+
+spisok = ['aim', 'chastiya', 'ayf', 'bar', 'fooboo', 'cok', 'cenaval']
+result = sp_strok(spisok)
+arg = 'c'
+sp_strok = result(arg)
+print(sp_strok)
