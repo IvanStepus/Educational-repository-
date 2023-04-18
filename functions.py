@@ -90,3 +90,19 @@ result = sp_strok(spisok)
 arg = 'c'
 sp_strok = result(arg)
 print(sp_strok)
+
+'''Write a function that takes one argument - a list of integers, and returns another function. 
+The returned function should take one argument - a number n, and return a list of the first n elements of the original 
+list.'''
+
+
+def sp_digit(spisok):
+    def argym(n):
+        return spisok[:n]
+
+    return argym
+
+
+spisok = [12, 1123, 123123, 12424, 23, 42, 2342, 342123, 1, 23, 1231]
+result = sp_digit(spisok)
+print(result(5))
